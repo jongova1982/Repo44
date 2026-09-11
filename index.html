@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tyrannosaurus rex</title>
+    <style>
+      :root {
+        --bg1: #1c1c1c;
+        --bg2: #2b1d10;
+        --panel: #f4e7d0;
+        --text: #1f1f1f;
+        --accent: #b94a2c;
+        --accent2: #d48d40;
+        --shadow: rgba(0, 0, 0, 0.25);
+      }
+
+      * { box-sizing: border-box; }
+
+      body {
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+        background: linear-gradient(135deg, var(--bg1), var(--bg2));
+        color: var(--text);
+      }
+
+      .container {
+        max-width: 1100px;
+        margin: 40px auto;
+        background: rgba(255,255,255,0.96);
+        border-radius: 22px;
+        overflow: hidden;
+        box-shadow: 0 20px 60px var(--shadow);
+      }
+
+      .header {
+        background: linear-gradient(135deg, #4a2d1e, #9e5a2a);
+        color: white;
+        padding: 30px 40px;
+      }
+
+      h1 {
+        margin: 0;
+        font-size: clamp(2rem, 4vw, 4rem);
+      }
+
+      .content {
+        display: grid;
+        grid-template-columns: 1.2fr 1fr;
+        gap: 30px;
+        padding: 30px 40px 40px;
+      }
+
+      .text {
+        background: var(--panel);
+        border-radius: 18px;
+        padding: 25px;
+      }
+
+      .text p {
+        font-size: 1.05rem;
+        line-height: 1.7;
+        margin: 0 0 18px;
+      }
+
+      .text h2 {
+        margin-top: 0;
+        color: var(--accent);
+        font-size: 1.6rem;
+      }
+
+      .features {
+        list-style: none;
+        padding: 0;
+        margin: 18px 0 0;
+      }
+
+      .features li {
+        background: #f9f1e7;
+        border-left: 6px solid var(--accent2);
+        padding: 12px 14px;
+        margin-bottom: 10px;
+        border-radius: 8px;
+      }
+
+      .illustration {
+        background: linear-gradient(180deg, #e9f2ff, #d8e7f7);
+        border-radius: 18px;
+        padding: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 420px;
+      }
+
+      svg {
+        width: 100%;
+        max-width: 420px;
+        height: auto;
+        filter: drop-shadow(0 10px 14px rgba(0, 0, 0, 0.2));
+      }
+
+      @media (max-width: 800px) {
+        .content {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <h1>Tyrannosaurus rex</h1>
+      </div>
+
+      <div class="content">
+        <div class="text">
+          <h2>¿Qué es el Tyrannosaurus rex?</h2>
+          <p>
+            El <strong>Tyrannosaurus rex</strong>, también conocido como <strong>T. rex</strong>, fue uno
+            de los dinosaurios carnívoros más grandes y famosos de la era de los dinosaurios. Vivió
+            hace unos 68 a 66 millones de años, durante el período Cretácico final, y era un depredador
+            dominante en lo que hoy es América del Norte.
+          </p>
+          <p>
+            Su nombre significa “lagarto tirano” y se debe a su gran tamaño, su poderosa mandíbula y su
+            apariencia imponente. El T. rex era un dinosaurio bípedo, es decir, caminaba sobre sus dos
+            patas traseras, y tenía brazos cortos pero muy fuertes.
+          </p>
+
+          <h2>Características principales</h2>
+          <ul class="features">
+            <li><strong>Gran tamaño:</strong> podía medir hasta 12 metros de largo y pesar más de 8 toneladas.</li>
+            <li><strong>Mandíbula poderosa:</strong> tenía dientes grandes y afilados, algunos de ellos muy largos.</li>
+            <li><strong>Ojos pequeños y mirada fuerte:</strong> su cabeza era enorme en comparación con el cuerpo.</li>
+            <li><strong>Cola robusta:</strong> ayudaba a sostener su cuerpo y mantener el equilibrio.</li>
+            <li><strong>Excelente depredador:</strong> se cree que podía localizar presas con gran olfato y visión.</li>
+            <li><strong>Armas cortas pero útiles:</strong> sus brazos eran pequeños, pero muy musculosos.</li>
+          </ul>
+        </div>
+
+        <div class="illustration" aria-label="Ilustración de un Tyrannosaurus rex">
+          <svg viewBox="0 0 420 360" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="titulo-svg descripcion-svg">
+            <title id="titulo-svg">Tyrannosaurus rex</title>
+            <desc id="descripcion-svg">Ilustración de un Tyrannosaurus rex en pose de depredador.</desc>
+
+            <defs>
+              <linearGradient id="bodyGrad" x1="0" x2="1">
+                <stop offset="0%" stop-color="#8d532e"/>
+                <stop offset="100%" stop-color="#5c3420"/>
+              </linearGradient>
+              <linearGradient id="bellyGrad" x1="0" x2="1">
+                <stop offset="0%" stop-color="#d0a170"/>
+                <stop offset="100%" stop-color="#b57b4d"/>
+              </linearGradient>
+            </defs>
+
+            <g>
+              <ellipse cx="210" cy="330" rx="110" ry="18" fill="rgba(0,0,0,0.15)"/>
+
+              <g transform="translate(32,10)">
+                <path d="M145 96 L238 72 L280 88 L247 112 L162 118 Z" fill="url(#bodyGrad)"/>
+                <path d="M120 120 L260 120 L312 148 L152 170 L98 150 Z" fill="url(#bodyGrad)"/>
+                <path d="M120 120 L98 146 L88 177 L108 178 L132 154 Z" fill="#6a3f2b"/>
+
+                <path d="M148 171 L224 171 L246 212 L160 212 Z" fill="url(#bellyGrad)"/>
+                <path d="M162 171 L188 214 L132 214 L120 184 Z" fill="#bc8659"/>
+
+                <path d="M116 155 L75 167 L55 196 L72 198 L102 185 Z" fill="#6a3f2b"/>
+                <path d="M121 160 L96 204 L79 232 L102 232 L132 181 Z" fill="#8d532e"/>
+                <path d="M303 142 L332 174 L340 207 L313 204 L289 168 Z" fill="#6a3f2b"/>
+                <path d="M289 168 L286 211 L270 244 L250 212 L261 168 Z" fill="#8d532e"/>
+
+                <path d="M250 92 L330 82 L350 98 L316 109 L250 109 Z" fill="#6a3f2b"/>
+                <path d="M334 82 L378 60 L387 70 L355 91 Z" fill="#7c4a2d"/>
+
+                <path d="M260 86 L296 69 L315 74 L291 92 Z" fill="#d0a170"/>
+                <path d="M290 73 L326 57 L341 62 L312 82 Z" fill="#d0a170"/>
+
+                <path d="M236 78 L253 48 L272 31 L281 46 L270 80 Z" fill="#6a3f2b"/>
+                <path d="M238 78 L217 58 L194 39 L188 58 L205 81 Z" fill="#6a3f2b"/>
+
+                <path d="M202 54 L228 25 L244 10 L260 16 L246 41 L220 62 Z" fill="#d0a170"/>
+                <path d="M176 52 L197 19 L211 12 L206 34 L186 60 Z" fill="#d0a170"/>
+
+                <circle cx="228" cy="36" r="11" fill="#f2d7b3"/>
+                <circle cx="228" cy="36" r="5" fill="#2e2e2e"/>
+                <circle cx="216" cy="32" r="2.4" fill="#1a1a1a"/>
+                <circle cx="239" cy="32" r="2.4" fill="#1a1a1a"/>
+                <path d="M220 42 Q228 49 236 42" stroke="#5a2b1d" stroke-width="2" fill="none" stroke-linecap="round"/>
+
+                <path d="M205 54 L178 70 L161 83 L179 86 L207 68 Z" fill="#6a3f2b"/>
+                <path d="M171 85 L155 79 L132 87 L138 98 L165 96 Z" fill="#6a3f2b"/>
+
+                <path d="M246 111 L268 121 L287 125 L292 135 L270 140 L243 130 Z" fill="#7b4a2b"/>
+                <path d="M270 140 L294 163 L313 176 L289 181 L260 160 Z" fill="#7b4a2b"/>
+
+                <path d="M120 178 L80 194 L58 215 L90 219 L125 196 Z" fill="#6a3f2b"/>
+                <path d="M82 196 L58 220 L46 243 L72 243 L95 214 Z" fill="#8d532e"/>
+
+                <path d="M140 194 L100 232 L120 260 L152 250 L164 208 Z" fill="#8d532e"/>
+                <path d="M180 214 L208 264 L179 275 L156 249 Z" fill="#6a3f2b"/>
+
+                <path d="M260 182 L308 192 L340 210 L312 220 L264 206 Z" fill="#8d532e"/>
+                <path d="M305 206 L336 230 L320 258 L287 250 L273 220 Z" fill="#6a3f2b"/>
+
+                <path d="M192 95 L220 136 L208 152 L168 124 Z" fill="#d0a170"/>
+                <path d="M223 137 L242 137 L262 147 L244 164 L217 160 Z" fill="#d0a170"/>
+
+                <path d="M244 96 L281 89 L289 98 L260 110 Z" fill="#f0c89d"/>
+                <path d="M280 89 L318 76 L326 85 L293 102 Z" fill="#f0c89d"/>
+
+                <path d="M279 88 L317 74 L323 80 L294 102 Z" fill="#5a2b1d"/>
+                <path d="M218 104 L233 116 L224 124 L208 111 Z" fill="#5a2b1d"/>
+
+                <path d="M182 97 L163 109 L147 122 L154 130 L183 119 Z" fill="#c78158"/>
+                <path d="M152 109 L141 117 L124 126 L133 136 L153 127 Z" fill="#c78158"/>
+
+                <path d="M166 118 L147 132 L133 146 L147 148 L169 134 Z" fill="#e8c8a5"/>
+                <path d="M106 165 L82 176 L63 190 L85 193 L106 181 Z" fill="#8d532e"/>
+
+                <path d="M125 120 L75 84 L90 68 L138 98 Z" fill="#7a4328"/>
+                <path d="M137 100 L98 67 L112 47 L155 86 Z" fill="#7a4328"/>
+                <path d="M90 70 L74 53 L83 37 L105 53 Z" fill="#7a4328"/>
+
+                <path d="M210 163 L230 153 L250 162 L233 174 Z" fill="#f0c89d"/>
+                <path d="M230 153 L248 134 L267 141 L250 162 Z" fill="#d9a16b"/>
+
+                <path d="M240 157 L272 172 L280 182 L258 189 L229 171 Z" fill="#d9a16b"/>
+                <path d="M254 171 L267 190 L299 193 L285 176 Z" fill="#9f6140"/>
+
+                <path d="M248 125 L285 129 L321 141 L334 157 L284 160 L247 146 Z" fill="#d0a170"/>
+                <path d="M321 141 L349 165 L366 178 L344 186 L312 166 Z" fill="#c88457"/>
+
+                <path d="M150 118 L178 116 L188 126 L178 140 L152 138 Z" fill="#e6b07f"/>
+                <path d="M184 116 L203 122 L206 134 L189 141 Z" fill="#e6b07f"/>
+
+                <g>
+                  <circle cx="251" cy="90" r="5" fill="#f3e7d8"/>
+                  <circle cx="255" cy="88" r="2" fill="#2c2c2c"/>
+                </g>
+              </g>
+            </g>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
